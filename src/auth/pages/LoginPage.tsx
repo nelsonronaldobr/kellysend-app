@@ -86,7 +86,7 @@ export const LoginPage = () => {
                         <ErrorMessage error={errors.password} />
                     )}
                 </div>
-                <div className='flex justify-end'>
+                {/* <div className='flex justify-end'>
                     <NavLink
                         to={'/forgot-password'}
                         className={
@@ -94,7 +94,7 @@ export const LoginPage = () => {
                         }>
                         ¿Olvidaste tu contraseña?
                     </NavLink>
-                </div>
+                </div> */}
                 <div>
                     <button
                         className='button-primary disabled:opacity-80 disabled:cursor-not-allowed font-bold w-full text-base py-3.5'

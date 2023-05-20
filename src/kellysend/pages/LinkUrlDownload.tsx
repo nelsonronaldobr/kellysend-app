@@ -70,7 +70,7 @@ export const LinkURLDownload = () => {
                             </div>
                         </form>
                     ) : (
-                        <div className='animate__animated  animate__fadeIn'>
+                        <div className='flex flex-col items-center animate__animated  animate__fadeIn'>
                             <h1 className='text-2xl font-bold'>
                                 Descarga tu archivo :
                             </h1>

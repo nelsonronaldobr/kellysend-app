@@ -45,7 +45,9 @@ export const Files = ({ acceptedFiles }: Props) => {
                             {name}
                         </p>
                         <p className='text-xs text-gray-500'>
-                            {(size / Math.pow(1024, 2)).toFixed(2)} MB
+                            {size < 0.9 * Math.pow(1024, 2)
+                                ? `${(size / 1024).toFixed(2)} KB`
+                                : `${(size / Math.pow(1024, 2)).toFixed(2)} MB`}
                         </p>
                     </div>
                 </li>
