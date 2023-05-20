@@ -44,6 +44,7 @@ export const useAuthStore = () => {
                     return data.messages.msg;
                 },
                 error: (error: ErrorResponse) => {
+                    console.log(error);
                     dispatch(onLogout());
                     return error.response.data.messages.msg;
                 }
@@ -67,6 +68,8 @@ export const useAuthStore = () => {
 
             dispatch(onLogin(data));
         } catch (error: any) {
+            console.log(error);
+
             toast.error((error.response.data?.messages as Messages).msg, {
                 duration: 6000
             });
