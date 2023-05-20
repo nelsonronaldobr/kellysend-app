@@ -18,10 +18,10 @@ export const Form = () => {
 
     return (
         <div className='w-full bg-gray-100 py-6 px-4 flex flex-col gap-4'>
-            <div className='flex flex-col gap-1'>
+            <div className='flex flex-col gap-2.5'>
                 <label
                     htmlFor='downloads'
-                    className='text-sm block text-center text-gray-800 font-semibold'>
+                    className='text-sm block text-gray-800 font-semibold'>
                     Eliminar despues de :
                 </label>
                 <select
