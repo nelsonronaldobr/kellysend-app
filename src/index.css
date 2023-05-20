@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .shadow-custom {
+    box-shadow: 0 6px 6px -8px #000;
+  }
+
+  .text-send {
+    background: rgb(255, 26, 103);
+    background: linear-gradient(135deg, rgba(255, 26, 103, 1) 0%, rgba(255, 129, 90, 1) 15%, rgba(255, 216, 71, 1) 31%, rgba(174, 64, 228, 1) 52%, rgba(98, 108, 251, 1) 71%, rgba(255, 26, 103, 1) 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .logo-mobile{
+    @apply block md:hidden w-14 object-cover;
+  }
+  .logo{
+    @apply hidden md:block w-44 object-cover;
+  }
+  .shadow-input {
+    box-shadow: 0 6px 4px rgba(239, 23, 99, 0.2);
+  }
+  
+  .form-control{
+    @apply text-gray-500 text-sm border border-gray-400 p-4 rounded-lg w-full focus:shadow-input focus:outline-4  focus:outline-offset-1 focus:outline-rose-500;
+  }
+  .button-primary{
+    @apply text-sm transition-colors bg-rose-500 hover:bg-rose-700 font-semibold text-white py-3 px-4 border border-rose-500 rounded;
+  }
+  .button-primary-outline{
+    @apply text-sm bg-transparent transition-colors hover:bg-rose-500 text-rose-500 font-semibold hover:text-white py-3 px-4 border border-rose-500 hover:border-transparent rounded;
+  }
+
+  .form-control-copy{
+    @apply text-gray-500 text-sm p-4 rounded-lg w-full shadow-input;
+  }
+
+  .loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@layer base{
+  .font-primary{
+  font-family: 'Open Sans', sans-serif;
+  }
+}
+
+
+.dropzone {
+  /* margin: 30px; */
+  height: calc(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropzone:focus-visible{
+  outline: none;
+  border: none;
+}
+.dropzone::before {
+  content: "";
+  position: absolute;
+}
