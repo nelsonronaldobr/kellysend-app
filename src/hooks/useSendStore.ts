@@ -55,7 +55,6 @@ export const useSendStore = () => {
             name,
             options
         };
-        console.log(options);
 
         toast.promise(kellySendApi.post<SendResponse>('/links', formData), {
             loading: 'Loading',
@@ -112,7 +111,6 @@ export const useSendStore = () => {
                 loading: 'Loading',
                 success: ({ data }) => {
                     dispatch(onSetLink(data.link));
-                    console.log(data);
 
                     return data.messages.msg;
                 },
@@ -148,7 +146,6 @@ export const useSendStore = () => {
             {
                 loading: 'Loading',
                 success: ({ data }) => {
-                    console.log(data);
                     dispatch(onSetLink(data.link));
                     return data.messages.msg;
                 },

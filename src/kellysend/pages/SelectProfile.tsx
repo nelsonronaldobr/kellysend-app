@@ -22,7 +22,6 @@ export const SelectProfile = () => {
     const handleSaveProfile = () => {
         startSavePhoto();
         navigate('/', { replace: true });
-        console.log('llego');
     };
     return (
         <div className='animate__animated animate__fadeIn flex py-10 xl:py-0 xl:h-screen flex-col gap-10 items-center justify-center'>
