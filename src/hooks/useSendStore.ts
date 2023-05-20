@@ -150,7 +150,6 @@ export const useSendStore = () => {
                     return data.messages.msg;
                 },
                 error: (error: ErrorResponse) => {
-                    console.log(error);
                     return error.response.data.messages.msg;
                 }
             },
