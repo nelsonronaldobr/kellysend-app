@@ -8,6 +8,11 @@ import WEBP from '../assets/extensions/webp.png';
 import PPT from '../assets/extensions/ppt.png';
 import PHOTOSHOP from '../assets/extensions/photoshop.png';
 import EXCEL from '../assets/extensions/sheets.png';
+import SVG from '../assets/extensions/svg.png';
+import JS from '../assets/extensions/js.png';
+import TXT from '../assets/extensions/txt.png';
+import ZIP from '../assets/extensions/zip.png';
+import RAR from '../assets/extensions/zip.png';
 
 type Options =
     | { showOnlyIcon: true; extension: string }
@@ -42,7 +47,12 @@ export const getImageUrl = ({ acceptedFiles, options }: Props): string => {
             docx: WORD,
             xlsx: EXCEL,
             csv: EXCEL,
-            ppt: PPT
+            ppt: PPT,
+            svg: SVG,
+            js: JS,
+            txt: TXT,
+            zip: ZIP,
+            rar: RAR
         };
     } else {
         type = options.extension!;
@@ -59,7 +69,12 @@ export const getImageUrl = ({ acceptedFiles, options }: Props): string => {
             csv: EXCEL,
             ppt: PPT,
             pptx: PPT,
-            psd: PHOTOSHOP
+            psd: PHOTOSHOP,
+            svg: SVG,
+            js: JS,
+            txt: TXT,
+            zip: ZIP,
+            rar: RAR
         };
     }
 
