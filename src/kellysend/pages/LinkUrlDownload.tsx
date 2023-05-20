@@ -41,11 +41,11 @@ export const LinkURLDownload = () => {
 
     return (
         <div className='md:w-4/5 xl:w-3/5 mx-auto flex mt-6 md:mt-14 container'>
-            <div className='h-[calc(100vh_-_200px)] px-6 sm:px-0 flex flex-1 items-center justify-center rounded-lg gap-6 animate__animated  animate__fadeIn relative'>
+            <div className='h-[calc(100vh_-_200px)] px-6 sm:px-0 flex flex-1 items-center justify-center rounded-lg gap-6 relative'>
                 <div className='p-6 flex-1s shadow-input sm:max-w-md md:max-w-lg flex-grow flex items-center justify-center flex-col gap-6 w-full'>
                     {hasPassword ? (
                         <form
-                            className='flex flex-col gap-5'
+                            className='flex flex-col gap-5 animate__animated  animate__fadeIn'
                             onSubmit={handleSubmit}>
                             <p className='text-sm font-semibold'>
                                 Este archivo esta protegido, coloca el password
@@ -70,7 +70,7 @@ export const LinkURLDownload = () => {
                             </div>
                         </form>
                     ) : (
-                        <>
+                        <div className='animate__animated  animate__fadeIn'>
                             <h1 className='text-2xl font-bold'>
                                 Descarga tu archivo :
                             </h1>
@@ -92,7 +92,7 @@ export const LinkURLDownload = () => {
                                     <div className='w-[102px] h-[46px] bg-gray-300 rounded'></div>
                                 </div>
                             )}
-                        </>
+                        </div>
                     )}
                 </div>
             </div>
