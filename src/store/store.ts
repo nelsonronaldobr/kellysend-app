@@ -8,7 +8,8 @@ export const store = configureStore({
         auth: authSlice.reducer,
         ui: uiSlice.reducer,
         send: sendSlice.reducer
-    }
+    },
+    devTools: import.meta.env.NODE_ENV === 'development'
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
